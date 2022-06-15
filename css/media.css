@@ -1,0 +1,134 @@
+/*------------------------------------------------------ main page styles ----------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    article {
+        width: 90%;
+    }
+
+
+
+@media only screen and (max-width: 400px) {
+    .socials ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   .socials ul li {
+       padding-left: 0;
+       padding-bottom: 25px;
+   }
+}
+/*------------------------------------------------------ Start of gallery ----------------------------------------------------------------*/
+@media only screen and (max-width: 1100px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #indexImg {
+    width: 100%;
+  }
+}
+
+/*------------------------------------------------------ Start of mobile nav ----------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px){
+    nav {
+      position: relative;
+    }
+
+    .nav-links {
+      position: fixed;
+      background: #fffffffa;
+      height: 55vh;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      right: 0px;
+      top: 228px;
+      clip-path: circle(50px at 90% -30%);
+      -webkit-clip-path: circle(100px at 90% -30%);
+      transition: all 1s ease-out;
+      z-index: 1;
+    }
+
+    .nav-links.open {
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+    }
+
+}
+
+.menu-btn {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  z-index: 2;
+  display: flex;
+  background-color: #fff;
+}
+
+.menu-btn.open {
+  position: fixed;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.menu-btn_burger {
+  width: 40px;
+  height: 4px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(225, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(225, 101, 47, .2);
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn_burger::after {
+  transform: translateY(16px);
+}
+
+/* ANIMATION */
+
+.menu-btn.open .menu-btn_burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/*------------------------------------------------------ End of mobile nav ----------------------------------------------------------------*/

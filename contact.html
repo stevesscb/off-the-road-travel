@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/media.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+rel="stylesheet"
+/>
+<title>On The Road Travel | Contact</title>
+</head>   
+<body>
+<header-nav></header-nav>
+<nav>
+    <div class="menu-btn">
+        <div class="menu-btn_burger"></div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">about</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="contact.html">contact</a></li>
+    </ul>
+</nav>
+<main>
+    <article>
+        <form id="contact-form" method="post" action="form.php">      
+            <input name="name" id="name" type="text" class="form-control" placeholder="Name" />   
+            <input name="email" id="email" type="text" class="form-control" placeholder="Email" />
+            <textarea name="text" id="message" class="form-control" placeholder="Comment"></textarea>
+            <input type="submit" class="submit-btn" value="SUBMIT"/>
+        </form>
+    </article>
+</main>
+<my-footer></my-footer>
+<script src="js/script.js"></script>
+<script src="js/templates.js"></script>     
+</body>
+</html>
